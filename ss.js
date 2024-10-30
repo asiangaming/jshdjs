@@ -2,9 +2,12 @@ const express = require('express');
 const axios = require('axios');
 const cheerio = require('cheerio');
 const https = require('https');
+const HttpsProxyAgent = require('https-proxy-agent');
+
 const app = express();
 const PORT = process.env.PORT || 3000;
-const agent = new https.Agent({ rejectUnauthorized: false });
+const proxyUrl = 'http://154.90.48.76:80';
+const agent = new HttpsProxyAgent(proxyUrl);
 
 app.get('/search/:domainToSearch', async (req, res) => {
     const domainToSearch = req.params.domainToSearch;
