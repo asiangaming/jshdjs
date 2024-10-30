@@ -1,7 +1,7 @@
 {
   "main": "ss.js",
   "scripts": {
-    "start": "node index.js" // Ganti dengan nama file entry point jika perlu
+    "start": "node ss.js"
   },
   "dependencies": {
     "axios": "^1.7.7",
